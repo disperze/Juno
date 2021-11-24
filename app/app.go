@@ -28,7 +28,6 @@ import (
 	"github.com/cosmos/cosmos-sdk/server/api"
 	"github.com/cosmos/cosmos-sdk/server/config"
 	servertypes "github.com/cosmos/cosmos-sdk/server/types"
-	storer "github.com/cosmos/cosmos-sdk/store"
 	store "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
@@ -521,9 +520,9 @@ func New(
 	app.mm.RegisterRoutes(app.Router(), app.QueryRouter(), encodingConfig.Amino)
 	app.mm.RegisterServices(cfg)
 
-	multistore := storer.NewCommitMultiStore(db)
-	app.SetCMS(multistore)
-	app.SetSnapshotCustom(wasm.NewWasmSnapshot(multistore, &app.wasmKeeper))
+	// multistore := storer.NewCommitMultiStore(db)
+	// app.SetCMS(multistore)
+	// app.SetSnapshotCustom(wasm.NewWasmSnapshot(multistore, &app.wasmKeeper))
 
 	// initialize stores
 	app.MountKVStores(keys)
