@@ -123,8 +123,8 @@ require (
 )
 
 replace (
-	github.com/CosmWasm/wasmd => github.com/disperze/wasmd v1.0.0-beta-sync
-	github.com/cosmos/cosmos-sdk => github.com/disperze/cosmos-sdk v0.44.3-csync
+	github.com/CosmWasm/wasmd => github.com/disperze/wasmd v1.0.0-beta-sync.1
+	github.com/cosmos/cosmos-sdk => github.com/disperze/cosmos-sdk v0.44.3-csync.1
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 	google.golang.org/grpc => google.golang.org/grpc v1.33.2
 )

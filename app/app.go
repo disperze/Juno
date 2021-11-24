@@ -520,14 +520,12 @@ func New(
 	app.mm.RegisterRoutes(app.Router(), app.QueryRouter(), encodingConfig.Amino)
 	app.mm.RegisterServices(cfg)
 
-	// multistore := storer.NewCommitMultiStore(db)
-	// app.SetCMS(multistore)
-	// app.SetSnapshotCustom(wasm.NewWasmSnapshot(multistore, &app.wasmKeeper))
-
 	// initialize stores
 	app.MountKVStores(keys)
 	app.MountTransientStores(tkeys)
 	app.MountMemoryStores(memKeys)
+
+	app.SetSnapshotCustom(wasm.NewWasmSnapshot(logger, &app.wasmKeeper))
 
 	anteHandler, err := NewAnteHandler(
 		HandlerOptions{
