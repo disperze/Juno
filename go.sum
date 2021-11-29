@@ -67,7 +67,6 @@ github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
 github.com/ChainSafe/go-schnorrkel v0.0.0-20200405005733-88cbf1b4c40d h1:nalkkPQcITbvhmL4+C4cKA87NW0tfm3Kl9VXRoPywFg=
 github.com/ChainSafe/go-schnorrkel v0.0.0-20200405005733-88cbf1b4c40d/go.mod h1:URdX5+vg25ts3aCh8H5IFZybJYKWhJHYMTnf+ULtoC4=
-github.com/CosmWasm/wasmvm v1.0.0-beta/go.mod h1:Id107qllDJyJjVQQsKMOy2YYF98sqPJ2t+jX1QES40A=
 github.com/CosmWasm/wasmvm v1.0.0-beta2 h1:xJBYuvX3Qp2dwZnt1j9m2WeVT7mK8riG6m1CmVf3daY=
 github.com/CosmWasm/wasmvm v1.0.0-beta2/go.mod h1:Id107qllDJyJjVQQsKMOy2YYF98sqPJ2t+jX1QES40A=
 github.com/DataDog/datadog-go v3.2.0+incompatible/go.mod h1:LButxg5PwREeZtORoXG3tL4fMGNddJ+vMq1mwgfaqoQ=
@@ -198,7 +197,6 @@ github.com/cosmos/iavl v0.15.3/go.mod h1:OLjQiAQ4fGD2KDZooyJG9yz+p2ao2IAYSbke8mV
 github.com/cosmos/iavl v0.17.1/go.mod h1:7aisPZK8yCpQdy3PMvKeO+bhq1NwDjUwjzxwwROUxFk=
 github.com/cosmos/iavl v0.17.2 h1:BT2u7DUvLLB+RYz9RItn/8n7Bt5xe5rj8QRTkk/PQU0=
 github.com/cosmos/iavl v0.17.2/go.mod h1:prJoErZFABYZGDHka1R6Oay4z9PrNeFFiMKHDAMOi4w=
-github.com/cosmos/ibc-go v1.2.1/go.mod h1:YieSs25Y0TSFR67qg6Elge34yJNEOjYhYB+HNQQLoSQ=
 github.com/cosmos/ibc-go v1.2.2 h1:bs6TZ8Es1kycIu2AHlRZ9dzJ+mveqlLN/0sjWtRH88o=
 github.com/cosmos/ibc-go v1.2.2/go.mod h1:XmYjsRFOs6Q9Cz+CSsX21icNoH27vQKb3squgnCOCbs=
 github.com/cosmos/ibc-go/v2 v2.0.0 h1:BMRg73JcdV9wGPI51j89ihm7VBZQsDLkqQ+tmzdeA9Y=
@@ -236,8 +234,8 @@ github.com/dgryski/go-farm v0.0.0-20200201041132-a6ae2369ad13/go.mod h1:SqUrOPUn
 github.com/dgryski/go-sip13 v0.0.0-20181026042036-e10d5fee7954/go.mod h1:vAd38F8PWV+bWy6jNmig1y/TA+kYO4g3RSRF0IAv0no=
 github.com/disperze/cosmos-sdk v0.44.3-csync.1 h1:SaEtHlk/2MGRdogl/zscBDgku1n8ynx2Wy8y4NNOnaA=
 github.com/disperze/cosmos-sdk v0.44.3-csync.1/go.mod h1:bA3+VenaR/l/vDiYzaiwbWvRPWHMBX2jG0ygiFtiBp0=
-github.com/disperze/wasmd v1.0.0-beta-sync.1 h1:WkwOLgvQlri1NacxwkyfXsnuzMPRcBXXfgcg1nlF+sM=
-github.com/disperze/wasmd v1.0.0-beta-sync.1/go.mod h1:puRk+IOWIAcEKQcaTIfDzj+44Ap7LpDfofSjmzkGloI=
+github.com/disperze/wasmd v1.0.0-beta-sync.2 h1:TyLcD5DW4YONj0X9QoWwrxnsxJtAbzq9+J9XhuooGGo=
+github.com/disperze/wasmd v1.0.0-beta-sync.2/go.mod h1:Js/AdrVMg6eNCwhveqTsBWrtAxsrQmV6s9rYx3CiBsQ=
 github.com/dlclark/regexp2 v1.2.0/go.mod h1:2pZnwuY/m+8K6iRw6wQdMtk+rH5tNGR1i55kozfMjCc=
 github.com/docker/docker v1.4.2-0.20180625184442-8e610b2b55bf/go.mod h1:eEKB0N0r5NX/I1kEveEz05bcu8tLC/8azJZsviup8Sk=
 github.com/docker/go-connections v0.4.0 h1:El9xVISelRB7BuFusrZozjnkIM5YnzCViNKohAFqRJQ=
@@ -767,7 +765,6 @@ github.com/rs/xhandler v0.0.0-20160618193221-ed27b6fd6521/go.mod h1:RvLn4FgxWubr
 github.com/rs/xid v1.2.1/go.mod h1:+uKXf+4Djp6Md1KODXJxgGQPKngRmWyn10oCKFzNHOQ=
 github.com/rs/xid v1.3.0/go.mod h1:trrq9SKmegXys3aeAKXMUTdJsYXVwGY3RLcfgqegfbg=
 github.com/rs/zerolog v1.23.0/go.mod h1:6c7hFfxPOy7TacJc4Fcdi24/J0NKYGzjG8FWRI916Qo=
-github.com/rs/zerolog v1.25.0/go.mod h1:7KHcEGe0QZPOm2IE4Kpb5rTh6n1h2hIgS5OOnu1rUaI=
 github.com/rs/zerolog v1.26.0 h1:ORM4ibhEZeTeQlCojCK2kPz1ogAY4bGs4tD+SaAdGaE=
 github.com/rs/zerolog v1.26.0/go.mod h1:yBiM87lvSqX8h0Ww4sdzNSkVYZ8dL2xjZJG1lAuGZEo=
 github.com/russross/blackfriday v1.5.2/go.mod h1:JO/DiYxRf+HjHt06OyowR9PTA263kcR/rfWxYHBV53g=
