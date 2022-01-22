@@ -123,8 +123,8 @@ require (
 )
 
 replace (
-	github.com/CosmWasm/wasmd => github.com/cosmoscontracts/wasmd v1.0.0-juno5
-	github.com/cosmos/cosmos-sdk => github.com/cosmos/cosmos-sdk v0.44.5
+	github.com/CosmWasm/wasmd => github.com/disperze/wasmd v1.0.0-juno3.0.20220122193655-0f4167b436c8
+	github.com/cosmos/cosmos-sdk => github.com/disperze/cosmos-sdk v0.44.4-0.20220122192623-6f719fdfa74c
 	github.com/cosmos/iavl => github.com/cosmos/iavl v0.17.3
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 	github.com/tecbot/gorocksdb => github.com/cosmos/gorocksdb v0.0.0-20211202124722-2c356d6d98e4

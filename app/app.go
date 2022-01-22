@@ -522,6 +522,12 @@ func New(
 	app.mm.RegisterInvariants(&app.CrisisKeeper)
 	app.mm.RegisterRoutes(app.Router(), app.QueryRouter(), encodingConfig.Amino)
 	app.mm.RegisterServices(cfg)
+
+	snapshots := map[string]store.CustomSnapshotter{
+		wasm.ModuleName: wasm.NewWasmSnapshot(logger, &app.wasmKeeper),
+	}
+	bApp.SetCustomSnapshot(snapshots)
+
 	// initialize stores
 	app.MountKVStores(keys)
 	app.MountTransientStores(tkeys)
