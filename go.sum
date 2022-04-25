@@ -473,8 +473,8 @@ github.com/dgryski/go-farm v0.0.0-20190423205320-6a90982ecee2/go.mod h1:SqUrOPUn
 github.com/dgryski/go-farm v0.0.0-20200201041132-a6ae2369ad13 h1:fAjc9m62+UWV/WAFKLNi6ZS0675eEUC9y3AlwSbQu1Y=
 github.com/dgryski/go-farm v0.0.0-20200201041132-a6ae2369ad13/go.mod h1:SqUrOPUnsFjfmXRMNPybcSiG0BgUW2AuFH8PAnS2iTw=
 github.com/dgryski/go-sip13 v0.0.0-20181026042036-e10d5fee7954/go.mod h1:vAd38F8PWV+bWy6jNmig1y/TA+kYO4g3RSRF0IAv0no=
-github.com/disperze/wasmd v0.21.1-0.20220425170250-96c99ae3e0e6 h1:ugxZE9UL8V8DEFFB8AO6u/EcDpATujLsNGflcL231Z0=
-github.com/disperze/wasmd v0.21.1-0.20220425170250-96c99ae3e0e6/go.mod h1:JfAsnWmcmx+huYGQCU/VyOwU3sIMazK9RhE2/tME/tk=
+github.com/disperze/wasmd v0.21.1-0.20220425211403-ef82ba0a12a4 h1:W3XuJMbHkqTxGNtXTKL7G/zA6wwNUhrifV0PNoxzSwQ=
+github.com/disperze/wasmd v0.21.1-0.20220425211403-ef82ba0a12a4/go.mod h1:JfAsnWmcmx+huYGQCU/VyOwU3sIMazK9RhE2/tME/tk=
 github.com/dlclark/regexp2 v1.2.0/go.mod h1:2pZnwuY/m+8K6iRw6wQdMtk+rH5tNGR1i55kozfMjCc=
 github.com/dnaeon/go-vcr v1.0.1/go.mod h1:aBB1+wY4s93YsC3HHjMBMrwTj2R9FHDzUr9KyGc8n1E=
 github.com/dnaeon/go-vcr v1.2.0/go.mod h1:R4UdLID7HZT3taECzJs4YgbbH6PIGXB6W/sc5OLb6RQ=

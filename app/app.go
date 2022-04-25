@@ -568,7 +568,7 @@ func New(
 	app.MountTransientStores(tkeys)
 	app.MountMemoryStores(memKeys)
 	app.SnapshotManager().RegisterExtensions(
-		wasm.NewWasmSnapshotter(app.CommitMultiStore(), keys[wasm.StoreKey], &app.wasmKeeper),
+		wasm.NewSnapshotter(app.CommitMultiStore(), &app.wasmKeeper),
 	)
 
 	anteHandler, err := NewAnteHandler(
