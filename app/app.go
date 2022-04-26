@@ -567,9 +567,6 @@ func New(
 	app.MountKVStores(keys)
 	app.MountTransientStores(tkeys)
 	app.MountMemoryStores(memKeys)
-	app.SnapshotManager().RegisterExtensions(
-		wasm.NewSnapshotter(app.CommitMultiStore(), &app.wasmKeeper),
-	)
 
 	anteHandler, err := NewAnteHandler(
 		HandlerOptions{
@@ -595,6 +592,13 @@ func New(
 	app.SetBeginBlocker(app.BeginBlocker)
 	app.SetAnteHandler(anteHandler)
 	app.SetEndBlocker(app.EndBlocker)
+
+	err = app.SnapshotManager().RegisterExtensions(
+		wasm.NewSnapshotter(app.CommitMultiStore(), &app.wasmKeeper),
+	)
+	if err != nil {
+		panic("error while register wasm snapshotter: " + err.Error())
+	}
 
 	upgradeInfo, err := app.UpgradeKeeper.ReadUpgradeInfoFromDisk()
 	if err != nil {
