@@ -229,10 +229,9 @@ var (
 		transfer.AppModuleBasic{},
 		vesting.AppModuleBasic{},
 		authzmodule.AppModuleBasic{},
-		ica.AppModuleBasic{},
-		intertx.AppModuleBasic{},
 		wasm.AppModuleBasic{},
 		ica.AppModuleBasic{},
+		intertx.AppModuleBasic{},
 	)
 
 	// module account permissions
@@ -465,12 +464,6 @@ func New(
 	icaModule := ica.NewAppModule(&app.ICAControllerKeeper, &app.ICAHostKeeper)
 	icaHostIBCModule := icahost.NewIBCModule(app.ICAHostKeeper)
 
-	// this is the demo controller from
-	// https://github.com/cosmos/interchain-accounts
-	// used with a little faith on our part
-	app.InterTxKeeper = intertxkeeper.NewKeeper(appCodec, keys[intertxtypes.StoreKey], app.ICAControllerKeeper, scopedInterTxKeeper)
-	interTxModule := intertx.NewAppModule(appCodec, app.InterTxKeeper)
-
 	// Create evidence Keeper for to register the IBC light client misbehaviour evidence route
 	evidenceKeeper := evidencekeeper.NewKeeper(
 		appCodec, keys[evidencetypes.StoreKey], &app.StakingKeeper, app.SlashingKeeper,
@@ -518,6 +511,11 @@ func New(
 	}
 
 	wasmApp := wasm.NewIBCHandler(app.wasmKeeper, intertxkeeper.NewWasmChannelKeeper(app.IBCKeeper.ChannelKeeper))
+	// this is the demo controller from
+	// https://github.com/cosmos/interchain-accounts
+	// used with a little faith on our part
+	app.InterTxKeeper = intertxkeeper.NewKeeper(appCodec, keys[intertxtypes.StoreKey], app.ICAControllerKeeper, scopedInterTxKeeper)
+	interTxModule := intertx.NewAppModule(appCodec, app.InterTxKeeper)
 	interTxIBCModule := intertx.NewIBCModule(wasmApp, app.InterTxKeeper)
 	icaControllerIBCModule := icacontroller.NewIBCModule(app.ICAControllerKeeper, interTxIBCModule)
 
@@ -566,9 +564,9 @@ func New(
 		authzmodule.NewAppModule(appCodec, app.AuthzKeeper, app.AccountKeeper, app.BankKeeper, app.interfaceRegistry),
 		transferModule,
 		icaModule,
-		interTxModule,
 		// this line is used by starport scaffolding # stargate/app/appModule
 		wasm.NewAppModule(appCodec, &app.wasmKeeper, app.StakingKeeper, app.AccountKeeper, app.BankKeeper),
+		interTxModule,
 	)
 
 	// During begin block slashing happens after distr.BeginBlocker so that

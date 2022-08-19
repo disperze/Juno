@@ -128,7 +128,7 @@ require (
 
 replace (
 	github.com/cosmos/iavl => github.com/cosmos/iavl v0.17.3
-	github.com/cosmos/interchain-accounts => github.com/disperze/wasm-ica-demo v0.0.0-20220819191723-50bfc41ea207
+	github.com/cosmos/interchain-accounts => github.com/disperze/wasm-ica-demo v0.0.0-20220819213933-96c23503c6ab
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 	google.golang.org/grpc => google.golang.org/grpc v1.33.2
 )
