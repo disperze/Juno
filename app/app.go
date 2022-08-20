@@ -789,7 +789,7 @@ func (app *App) InitChainer(ctx sdk.Context, req abci.RequestInitChain) abci.Res
 
 	icaGenesisState.ControllerGenesisState.Params.ControllerEnabled = true
 	icaGenesisState.HostGenesisState.Params.HostEnabled = true
-	icaGenesisState.HostGenesisState.Params.AllowMessages = []string{"*"} // allow all msgs
+	icaGenesisState.HostGenesisState.Params.AllowMessages = []string{"/cosmos.bank.v1beta1.MsgSend"}
 	genesisJson, err := app.cdc.MarshalJSON(icaGenesisState)
 	if err != nil {
 		panic(err)
